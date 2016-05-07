@@ -161,7 +161,7 @@ def tradingbot():
                      max_prev_seed_value = seedvalue
                   else:
                      max_prev_seed_value = Decimal(seed_data[0]['max'].encode("utf-8"))
-                  print(timestamp() + " Present currency Pair is " + seed_data[0]['name'] + " with growth of " + str(seedchange) + ". New seed value is " + str(seedvalue) + " and match index of " + str(match_index)) 
+                  print(timestamp() + " Present currency Pair is " + seed_data[0]['name'] + " with growth of " + str(seedchange) + ". New seed value is " + str(seedvalue) + " with match index of " + str(match_index) + " and avg_change of " + str(avg_change)) 
                   with open('seedfile.txt', 'w') as seedfilez:
                        json.dump([{"name":seed_data[0]['name'],"max":str(max_prev_seed_value),"value":str(seedvalue),"avg_change":str(avg_change),"match":str(match_index),"last_value":ticker_item['last']}], seedfilez)                   
 #                j = 0
