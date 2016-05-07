@@ -1,1 +1,1 @@
-[{"last_value": "5.1e-07", "name": "BTC_PINK", "match": "2.0", "avg_change": "0.00136582718781"}]
+[{"last_value": "", "name": "", "match": "", "avg_change": ""}]
