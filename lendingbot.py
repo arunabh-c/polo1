@@ -114,8 +114,9 @@ def tradingbot():
             for ticker_item in ticker.values():
               change = Decimal(0)
               match_index = Decimal(0)  
-              if ticker_item['isFrozen'] != str(1):# and   #and (ticker.keys()[i] != 'USDT_XMR')
-                #print (str(ticker_item['last']) + " " + old_data[i]['last_price'])
+              if (ticker.keys()[i] == old_data[i]['name']):# and   #ticker_item['isFrozen'] != str(1) and 
+                #print (str(ticker.values()[i]['baseVolume']) + " == " + ticker_item['baseVolume'] + " " + ticker.keys()[i])# + " baseVolume is " + old_data[i]['name'])                
+                #print (str(ticker.keys()[i]) + " == " + old_data[i]['name'])
                 if Decimal(old_data[i]['last_price'].encode("utf-8")) > Decimal(0):
                    change = (Decimal(ticker_item['baseVolume'].encode("utf-8"))/Decimal(old_data[i]['last_price'].encode("utf-8")) - 1)
                 else:
