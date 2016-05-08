@@ -259,7 +259,7 @@ def livetrader():
 	   
     if availpair != '' and seedpair != availpair and availpairmatchindx > Decimal(0):
        if (availpairmatchindx > Decimal(1) and availgrowth > Decimal(120)*seedscore) :#availpairmatchindx > seedmatchindex + 1 or # and Decimal(10)*seedscore < availgrowth): #(seedchange > 0.00001 and availgrowth > (Decimal(1.1))*seedchange) or
-          print(timestamp() + " traded to " + availpair + " Previous avg_change was " + str(seedscore) + " and matchindex was " + str(seedmatchindex))   
+          print(timestamp() + " traded to " + availpair)   
           seedamount *= Decimal(0.991)#0.996
           seedpair = availpair
           last_curr_val = avail_last_value
